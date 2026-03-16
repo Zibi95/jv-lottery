@@ -8,9 +8,9 @@ public class Lottery {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Ball getRandomBall() {
-        Colors randomColor = this.colorSupplier.getRandomColor();
-        int randomNumber = this.randomizer.nextInt(MAX_NUMBER + 1);
-
-        return new Ball(randomColor, randomNumber);
+        return new Ball(
+                this.colorSupplier.getRandomColor(),
+                this.randomizer.nextInt(MAX_NUMBER + 1)
+        );
     }
 }
